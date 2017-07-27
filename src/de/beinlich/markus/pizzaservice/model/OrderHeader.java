@@ -25,7 +25,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Version;
 
 @Entity
-@NamedQuery(name = OrderHeader.findAll, query = "SELECT oh FROM OrderHeader oh")
+@NamedQuery(name = OrderHeader.findAll, query = "SELECT oh FROM OrderHeader oh ")
 public class OrderHeader implements Serializable {
 
     private static final long serialVersionUID = 4994150745256346814L;

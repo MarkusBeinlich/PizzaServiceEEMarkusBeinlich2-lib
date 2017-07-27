@@ -1,7 +1,6 @@
 package de.beinlich.markus.pizzaservice.model;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -19,7 +18,7 @@ public class Customer implements Serializable {
     @Version
     private Long lastUpdate;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer customerId;
     @OneToMany(mappedBy = "customer", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private List<OrderHeader> orderHeaders;
