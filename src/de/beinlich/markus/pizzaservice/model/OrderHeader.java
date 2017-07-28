@@ -38,7 +38,7 @@ public class OrderHeader implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer orderId;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Customer customer;
 
     @OneToMany(mappedBy = "orderHeader", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
