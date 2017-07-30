@@ -16,4 +16,5 @@ import javax.ejb.Remote;
 public interface MenuEjbRemote {
       public Menu getMenu(Menu menu);
       public void addMenu(Menu menu);
+      public Menu updateMenu(Menu menu);
 }

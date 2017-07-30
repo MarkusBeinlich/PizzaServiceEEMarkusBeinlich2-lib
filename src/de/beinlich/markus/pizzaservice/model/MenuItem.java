@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Version;
+import org.eclipse.persistence.annotations.AdditionalCriteria;
 
 @Entity
 @NamedQuery(name = MenuItem.findAll, query = "SELECT m FROM MenuItem m")
@@ -41,6 +42,7 @@ public class MenuItem implements Serializable {
     }
 
     public Integer getMenuItemId() {
+        System.out.println("getMenuItemId:" + menuItemId);
         return menuItemId;
     }
 
