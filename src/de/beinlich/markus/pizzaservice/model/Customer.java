@@ -8,13 +8,17 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Version;
 
 @Entity
+@NamedQuery(name="Customer.findByEmail", query = "SELECT c FROM Customer c " +
+        "WHERE c.email = :email" )
 public class Customer implements Serializable {
 
     private static final long serialVersionUID = -565390959945252363L;
+    public static final String findByEmail = "Customer.findByEmail";
     @Version
     private Long lastUpdate;
     @Id
