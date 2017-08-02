@@ -106,4 +106,20 @@ public class Customer implements Serializable {
         this.postcode = postcode;
     }
 
+    public Long getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(Long lastUpdate) {
+        this.lastUpdate = lastUpdate;
+    }
+
+    public List<OrderHeader> getOrderHeaders() {
+        return orderHeaders;
+    }
+
+    public void setOrderHeaders(List<OrderHeader> orderHeaders) {
+        this.orderHeaders = orderHeaders;
+    }
+
 }
