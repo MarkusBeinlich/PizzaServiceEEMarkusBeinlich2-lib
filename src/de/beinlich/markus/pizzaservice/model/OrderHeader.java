@@ -144,6 +144,9 @@ public class OrderHeader implements Serializable {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+        if (customer.getOrderHeaders().contains(this)== false) {
+            customer.getOrderHeaders().add(this);
+        }
     }
 
     public Integer getOrderId() {
